@@ -40,7 +40,7 @@ echo "Image Flavour: $IMAGE_FLAVOUR"
 echo ""
 echo "Checking make results are committed:"
 echo ""
-make
+make -B
 git status || exit 1
 
 ################################################################################
