@@ -35,6 +35,15 @@ echo "PHP Version: $PHP_VERSION"
 echo "Image Flavour: $IMAGE_FLAVOUR"
 
 ################################################################################
+# Ensure that the makefile has been run, and there are no uncommitted changes
+################################################################################
+echo ""
+echo "Checking make results are committed:"
+echo ""
+make
+git status || exit 1
+
+################################################################################
 # Pull published image down so we can try and reuse layers
 ################################################################################
 echo ""
