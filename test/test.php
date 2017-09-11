@@ -46,12 +46,9 @@ $required_extensions = array(
   'intl'
 );
 
-// remove IoCube Loader from required extensions if php version is greater than/equal to 7.1
-if (version_compare(phpversion(), '7.1.0') >= 0) {
-    $key = array_search('IonCube Loader', $required_extensions);
-    if (false !== $key) {
-        unset($required_extensions[$key]);
-    }
+$key = array_search('IonCube Loader', $required_extensions);
+if (false !== $key) {
+    unset($required_extensions[$key]);
 }
 
 foreach ($required_extensions as $extension) {
