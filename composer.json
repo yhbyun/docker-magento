@@ -1,0 +1,32 @@
+{
+    "name": "ecplaza/happyland.com",
+    "authors": [
+        {
+            "name": "YongHun Byun",
+            "email": "yonghunbyun@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.firegento.com"
+        },
+        {
+            "type": "composer",
+            "url": "http://dev.ecplaza.net/packagist"
+        }
+    ],
+    "require": {
+        "aydin-hassan/magento-core-composer-installer": "*",
+        "openmage/magento-lts": "1.9.3.x-dev"
+    },
+    "require-dev": {
+        "aoepeople/aoe_templatehints": "^0.4.3"
+    },
+    "extra": {
+        "magento-root-dir": "magento",
+        "magento-force": "override",
+        "magento-deploystrategy": "copy",
+        "magento-core-package-type": "magento-source"
+    }
+}
